@@ -5,6 +5,7 @@ import axios from "axios";
 
 async function getData(){
     let userid = readline.question("Enter the userid : ");
+    let color = cli.xterm(202);
     let color1 = cli.xterm(5);
     let color2 = cli.xterm(19);
     let color3 = cli.xterm(37);
@@ -34,6 +35,7 @@ async function getData(){
         "followers": `${result.data.followers}`,
         "following": `${result.data.following}`
     }
+    console.log(color(`************************ WELCOME TO GITHUB ************************`));
     console.log(newdata);
     console.log(color1(newdata.login));
     console.log(color2(newdata.id));

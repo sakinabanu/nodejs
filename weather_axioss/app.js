@@ -6,6 +6,7 @@ import axios from "axios";
 async function getweather(){
     let APIkey = readline.question("Enter the API key : ");
     let cityname = readline.question("Enter the city name : ");
+    let color = cli.xterm(161);
     let color1 = cli.xterm(4);
     let color2 = cli.xterm(228);
     let color3 = cli.xterm(55);
@@ -52,6 +53,7 @@ async function getweather(){
         "name": `${report.data.name}`
     
     }
+    console.log(color(`************************** WEATHER REPORT **************************`));
     console.log(newdata);
     console.log(color1(newdata.coord.longitude));
     console.log(color2(newdata.coord.latitude));
