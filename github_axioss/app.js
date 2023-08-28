@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 async function getData(){
-    let userid = readline.question("Enter the userid : ");
+   
     let color = cli.xterm(202);
     let color1 = cli.xterm(5);
     let color2 = cli.xterm(19);
@@ -19,6 +19,7 @@ async function getData(){
     let color11 = cli.xterm(229);
     let color12 = cli.xterm(210);
 
+    let userid = readline.question("Enter the userid : ");
     try{
     let url = `http://api.github.com/users/${userid}`;
     let result = await axios.get(url);
@@ -37,17 +38,17 @@ async function getData(){
     }
     console.log(color(`************************ WELCOME TO GITHUB ************************`));
     console.log(newdata);
-    console.log(color1(newdata.login));
-    console.log(color2(newdata.id));
-    console.log(color3(newdata.name));
-    console.log(color4(newdata.company));
-    console.log(color5(newdata.location));
-    console.log(color6(newdata.bio));
-    console.log(color7(newdata.twitter_username));
-    console.log(color8(newdata.public_repos));
-    console.log(color9(newdata.public_gists));
-    console.log(color10(newdata.followers));
-    console.log(color11(newdata.following));
+    console.log(color1("login :", newdata.login));
+    console.log(color2("id :", newdata.id));
+    console.log(color3("name :", newdata.name));
+    console.log(color4("company:", newdata.company));
+    console.log(color5("location:", newdata.location));
+    console.log(color6("bio :", newdata.bio));
+    console.log(color7("twitter_username :", newdata.twitter_username));
+    console.log(color8("public_repos :", newdata.public_repos));
+    console.log(color9("public_gists :", newdata.public_gists));
+    console.log(color10("followers :", newdata.followers));
+    console.log(color11("following :", newdata.following));
     }
     catch (error){
         console.log(color12(`THE ID "${userid}" DOESN'T EXIST!`));
