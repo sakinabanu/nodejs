@@ -16,7 +16,7 @@ async function getData(){
     let color9 = cli.xterm(217);
     let color10 = cli.xterm(224);
     let color11 = cli.xterm(229);
-    let color12 = cli.xterm(210)
+    let color12 = cli.xterm(210);
 
     try{
     let url = `http://api.github.com/users/${userid}`;
