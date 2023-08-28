@@ -36,8 +36,9 @@ async function getData(){
         "followers": `${result.data.followers}`,
         "following": `${result.data.following}`
     }
-    console.log(color(`************************ WELCOME TO GITHUB ************************`));
+    
     console.log(newdata);
+    console.log(color(`************************ WELCOME TO GITHUB ************************`));
     console.log(color1("login :", newdata.login));
     console.log(color2("id :", newdata.id));
     console.log(color3("name :", newdata.name));
